@@ -1,0 +1,40 @@
+version: '3'
+services:
+  db_master:
+    platform: linux/x86_64
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASS}
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
+      - TZ=${TZ}
+    ports:
+      - ${DB_PORT}:3306
+
+  db_test:
+    platform: linux/x86_64
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=${DB_TEST_NAME}
+      - MYSQL_USER=${DB_TEST_USER}
+      - MYSQL_PASSWORD=${DB_TEST_PASS}
+      - MYSQL_ROOT_PASSWORD=${DB_TEST_ROOT_PASS}
+      - TZ=${TZ}
+    ports:
+      - ${DB_TESTING_PORT}:3306
+  # mysql:
+  #   platform: linux/x86_64
+  #   image: mysql:latest
+  #   environment:
+  #     MYSQL_DATABASE: wish-mania
+  #     MYSQL_USER: root
+  #     MYSQL_PASSWORD: localpass
+  #     MYSQL_ROOT_PASSWORD: localpass
+  #   ports:
+  #     - "3307:3307"
+  #   expose:
+  #     - 3307
+  #   volumes:
+  #     - ./docker/db/data:/var/lib/mysql
+  #     - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
