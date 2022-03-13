@@ -14,8 +14,12 @@ class CreateRegulationsTable extends Migration
     public function up()
     {
         Schema::create('regulations', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('name',255)->comment('レギュレーションマーク名');
+            $table->string('label', 255)->comment('レギュレーション名');
+            $table->boolean('del_flag')->default(0);
+            $table->dateTime('created')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->datetime('modified')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
         });
     }
 

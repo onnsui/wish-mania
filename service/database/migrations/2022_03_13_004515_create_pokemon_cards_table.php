@@ -21,10 +21,14 @@ class CreatePokemonCardsTable extends Migration
             $table->unsignedInteger('regulation_id')->comment('レギュレーションマークID');
             $table->integer('list_no')->comment('リスト番号');
             $table->unsignedInteger('rarity_id')->comment('レアリティ');
+            $table->boolean('del_flag')->default(0);
             $table->dateTime('created')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->datetime('modified')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
 
-            $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('expansion_mark_id')->references('id')->on('expansion_marks');
+            $table->foreign('regulation_id')->references('id')->on('regulations');
+            $table->foreign('rarity_id')->references('id')->on('rarities');
         });
     }
 
