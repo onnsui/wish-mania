@@ -88,7 +88,8 @@ class ExpansionMarkSeeder extends Seeder
                 'name' => 'S1W',
                 'label' => 'ソード'
             ],
-            ['id' => 15,'name' => 'S9a', 'label'=> 'バトルリージョン'],
+            [
+                'id' => 15,'name' => 'S9a', 'label'=> 'バトルリージョン'],
             ['id' => 16,'name' => 'S6a', 'label'=> 'イーブイヒーローズ'],
             ['id' => 17,'name' => 'S5a', 'label'=> '双璧のファイター'],
             ['id' => 18,'name' => 'S3a', 'label'=> '伝説の鼓動'],
@@ -120,12 +121,11 @@ class ExpansionMarkSeeder extends Seeder
             ['id' => 44,'name' => 'S8a-P', 'label' => 'プロモカードパック 25th ANNIVERSARY edition'],
         ];
 
-        foreach($expansionMarkData as $data) {
+        foreach ($expansionMarkData as $data) {
             DB::table('expansion_marks')->updateOrInsert(
                 ['id' => $data['id']],
                 $data,
             );
         }
-    
     }
 }
