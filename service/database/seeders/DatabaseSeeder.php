@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             ExpansionMarkSeeder::class,
+            RaritySeeder::class,
+            RegulationSeeder::class,
         ]);
     }
 }
