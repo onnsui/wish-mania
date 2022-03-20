@@ -18,78 +18,21 @@ class ExpansionMarkSeeder extends Seeder
         // 左のメニューから抜き出した
         // ソード&シールドまでやった
         $expansionMarkData = [
-            [
-                'id' => 1,
-                'name' => 'S9',
-                'label' => 'スターバース'
-            ],
-            [
-                'id' => 2,
-                'name' => 'S8a',
-                'label' => '25thANNIVERSARY COLLECTION'
-            ],
-            [
-                'id' => 3,
-                'name' => 'S8',
-                'label' => 'フュージョンアーツ'
-            ],
-            [
-                'id' => 4,
-                'name' => 'S7R',
-                'label' => '蒼空ストリーム'
-            ],
-            [
-                'id' => 5,
-                'name' => 'S7D',
-                'label' => '摩天パーフェクト'
-            ],
-            [
-                'id' => 6,
-                'name' => 'S6K',
-                'label' => '漆黒のガイスト'
-            ],
-            [
-                'id' => 7,
-                'name' => 'S6H',
-                'label' => '白銀のランス'
-            ],
-            [
-                'id' => 8,
-                'name' => 'S5R',
-                'label' => '連撃マスター'
-            ],
-            [
-                'id' => 9,
-                'name' => 'S5I',
-                'label' => '一撃マスター'
-            ],
-            [
-                'id' => 10,
-                'name' => 'S4',
-                'label' => '仰天のボルテッカー'
-            ],
-            [
-                'id' => 11,
-                'name' => 'S3',
-                'label' => 'ムゲンゾーン'
-            ],
-            [
-                'id' => 12,
-                'name' => 'S2',
-                'label' => '反逆クラッシュ'
-            ],
-            [
-                'id' => 13,
-                'name' => 'S1H',
-                'label' => 'シールド'
-            ],
-            [
-                'id' => 14,
-                'name' => 'S1W',
-                'label' => 'ソード'
-            ],
-            [
-                'id' => 15,'name' => 'S9a', 'label'=> 'バトルリージョン'],
+            ['id' => 1,'name' => 'S9','label' => 'スターバース'],
+            ['id' => 2,'name' => 'S8a','label' => '25thANNIVERSARY COLLECTION'],
+            ['id' => 3,'name' => 'S8','label' => 'フュージョンアーツ'],
+            ['id' => 4,'name' => 'S7R','label' => '蒼空ストリーム'],
+            ['id' => 5,'name' => 'S7D','label' => '摩天パーフェクト'],
+            ['id' => 6,'name' => 'S6K','label' => '漆黒のガイスト'],
+            ['id' => 7,'name' => 'S6H','label' => '白銀のランス'],
+            ['id' => 8,'name' => 'S5R','label' => '連撃マスター'],
+            ['id' => 9,'name' => 'S5I','label' => '一撃マスター'],
+            ['id' => 10,'name' => 'S4','label' => '仰天のボルテッカー'],
+            ['id' => 11,'name' => 'S3','label' => 'ムゲンゾーン'],
+            ['id' => 12,'name' => 'S2','label' => '反逆クラッシュ'],
+            ['id' => 13,'name' => 'S1H','label' => 'シールド'],
+            ['id' => 14,'name' => 'S1W','label' => 'ソード'],
+            ['id' => 15,'name' => 'S9a', 'label'=> 'バトルリージョン'],
             ['id' => 16,'name' => 'S6a', 'label'=> 'イーブイヒーローズ'],
             ['id' => 17,'name' => 'S5a', 'label'=> '双璧のファイター'],
             ['id' => 18,'name' => 'S3a', 'label'=> '伝説の鼓動'],
